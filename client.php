@@ -12,9 +12,12 @@ echo "step2\n";
 $socket->connect("tcp://localhost:5555");
 echo "step3\n";
 /* Посылаем запрос */
-$socket->send("Hello there");
+$socket->send("http://myip.ru/");
 echo "step4\n";
 /* Получаем ответ */
 $message = $socket->recv();
 print_r($message);
-echo "step5\n";
+echo "\nstep5\n";
+
+
+$socket->send("done");
